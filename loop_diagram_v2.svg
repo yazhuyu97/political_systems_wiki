@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2440.6698333333334 711.4000000000001" width="2440.6698333333334" height="711.4000000000001" style="--bg:#18181B;--fg:#F4F4F5;--line:#71717A;--muted:#A1A1AA;--surface:#27272A;--border:#3F3F46;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="Start" data-to="S1_Plan" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="449.14200000000005,163.15000000000003 449.1419999999998,387.55" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S1_Plan" data-to="S1_File" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="449.1419999999998,441.35 449.1419999999998,474.90000000000003" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S1_File" data-to="Gate1" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="388.72266666666656,474.90000000000003 388.72266666666656,462.90000000000003 53.039999999999964,462.90000000000003 53.039999999999964,122.4 153.36200000000008,122.4 153.36200000000008,76.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate1" data-to="S1_Fix" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="❌ 架構需調整" points="171.25950000000012,76.9 171.25950000000012,122.4 173.93499999999995,122.4 173.93499999999995,387.55" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S1_Fix" data-to="S1_File" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="173.93499999999995,424.45 173.93499999999995,450.90000000000003 418.9323333333332,450.90000000000003 418.9323333333332,474.90000000000003" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate1" data-to="S2_Draft" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="✅ 大綱通過" points="189.15700000000015,76.9 189.15700000000015,88.9 1164.5888333333332,88.9 1164.5888333333332,202.70000000000002 1138.4826666666668,202.70000000000002 1138.4826666666668,283 1211.2083333333333,283 1211.2083333333333,297.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2_Draft" data-to="S2_Budget" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1287.6448333333333,351.25 1287.6448333333333,369.4 1044.6235,369.4 1044.6235,387.55" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2_Budget" data-to="S2_Split" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="⚠️ 嚴重超載" points="1099.7801666666664,475.15000000000003 1099.7801666666664,588.7 1186.5994999999998,588.7 1186.5994999999998,588.7" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2_Split" data-to="S2_Draft" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1263.8148333333334,588.7 1263.8148333333334,588.7 1338.6025,588.7 1338.6025,351.25" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2_Budget" data-to="S2_File" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="✅ 容量安全" points="989.4668333333332,475.15000000000003 989.4668333333329,564.7 540.2571666666663,564.7 540.2571666666663,588.7" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2_File" data-to="Gate2" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="475.14483333333305,588.7 475.14483333333305,564.7 40.039999999999964,564.7 40.039999999999964,166.70000000000002 964.1215,166.70000000000002 964.1215,146.25" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate2" data-to="S2_Fix" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="❌ 修改本頁文字/公式" points="989.4668333333334,146.25 989.4668333333332,297.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2_Fix" data-to="S2_Budget" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="989.466833333333,334.35 989.466833333333,369.4 1044.6235,369.4 1044.6235,387.55" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate2" data-to="S1_File" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="⏪ 大綱推翻重排 (Rollback)" points="976.7941666666668,146.25 976.7941666666668,178.70000000000002 683.4540000000002,178.70000000000002 683.4540000000002,450.90000000000003 479.35166666666646,450.90000000000003 479.35166666666646,474.90000000000003" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate2" data-to="S2_Draft" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="🔄 本章通過，推進下一章" points="1002.1395,146.25 1002.1395,214.70000000000002 1290.6765833333334,214.70000000000002 1290.6765833333334,283 1287.6448333333333,283 1287.6448333333333,297.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate2" data-to="S3_Build" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="✅ 所有章節全數核定" points="1014.8121666666666,146.25 1014.8121666666666,178.70000000000002 1643.2503333333332,178.70000000000002 1643.2503333333332,297.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S3_Build" data-to="S3_File" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1643.2503333333334,351.25 1643.2503333333334,369.4 1814.2955833333333,369.4 1814.2955833333333,387.55" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S3_File" data-to="Gate3" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1814.2955833333333,387.55 1814.2955833333333,372.8 1827.9828333333332,372.8 1827.9828333333332,76.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate3" data-to="S3_Fix" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="❌ 樣式細微調校" points="1840.6554999999998,76.9 1840.6554999999998,219.6 1949.6188333333332,219.6 1949.6188333333332,297.45" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S3_Fix" data-to="S3_File" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1949.6188333333332,334.35 1949.6188333333332,369.4 1814.2955833333333,369.4 1814.2955833333333,387.55" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate3" data-to="S2_Draft" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="⏪ 文字仍需大幅刪修 (Rollback)" points="1815.3101666666664,76.9 1815.3101666666664,202.70000000000002 1474.1783333333333,202.70000000000002 1474.1783333333333,271 1364.081333333333,271 1364.081333333333,297.45" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate3" data-to="S1_File" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="⏪ 章節架構重構 (Rollback)" points="1802.6374999999998,76.9 1802.6374999999998,190.70000000000002 847.5128333333332,190.70000000000002 847.5128333333332,462.90000000000003 509.5613333333333,462.90000000000003 509.5613333333333,474.90000000000003" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Gate3" data-to="End" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="✅ 驗收滿意完工" points="1853.3281666666664,76.9 1853.3281666666664,88.9 2244.4623333333334,88.9 2244.4623333333334,169.20000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="Gate1" data-to="S1_Fix" data-label="❌ 架構需調整">
+  <rect x="128.43499999999995" y="129.4" width="90.71200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="173.79099999999994" y="144.55" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">❌ 架構需調整</text>
+</g>
+<g class="edge-label" data-from="Gate1" data-to="S2_Draft" data-label="✅ 大綱通過">
+  <rect x="1125.0888333333332" y="141.4" width="78.83200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1164.5048333333332" y="156.55" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">✅ 大綱通過</text>
+</g>
+<g class="edge-label" data-from="S2_Budget" data-to="S2_Split" data-label="⚠️ 嚴重超載">
+  <rect x="1057.2801666666664" y="527.4000000000001" width="84.77200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1099.6661666666664" y="542.5500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">⚠️ 嚴重超載</text>
+</g>
+<g class="edge-label" data-from="S2_Budget" data-to="S2_File" data-label="✅ 容量安全">
+  <rect x="949.9668333333329" y="527.4000000000001" width="78.83200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="989.382833333333" y="542.5500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">✅ 容量安全</text>
+</g>
+<g class="edge-label" data-from="Gate2" data-to="S2_Fix" data-label="❌ 修改本頁文字/公式">
+  <rect x="924.4668333333334" y="238.6" width="129.322" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="989.1278333333335" y="253.75" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">❌ 修改本頁文字/公式</text>
+</g>
+<g class="edge-label" data-from="Gate2" data-to="S1_File" data-label="⏪ 大綱推翻重排 (Rollback)">
+  <rect x="610.4540000000002" y="413.6" width="145.954" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="683.4310000000002" y="428.75" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">⏪ 大綱推翻重排 (Rollback)</text>
+</g>
+<g class="edge-label" data-from="Gate2" data-to="S2_Draft" data-label="🔄 本章通過，推進下一章">
+  <rect x="1215.1765833333334" y="221.70000000000002" width="150.11200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1290.2325833333334" y="236.85000000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">🔄 本章通過，推進下一章</text>
+</g>
+<g class="edge-label" data-from="Gate2" data-to="S3_Build" data-label="✅ 所有章節全數核定">
+  <rect x="1579.7503333333332" y="209.70000000000002" width="126.35200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1642.926333333333" y="224.85000000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">✅ 所有章節全數核定</text>
+</g>
+<g class="edge-label" data-from="Gate3" data-to="S3_Fix" data-label="❌ 樣式細微調校">
+  <rect x="1898.1188333333332" y="226.6" width="102.59200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1949.4148333333333" y="241.75" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">❌ 樣式細微調校</text>
+</g>
+<g class="edge-label" data-from="Gate3" data-to="S2_Draft" data-label="⏪ 文字仍需大幅刪修 (Rollback)">
+  <rect x="1389.1783333333333" y="209.70000000000002" width="169.714" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1474.0353333333333" y="224.85000000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">⏪ 文字仍需大幅刪修 (Rollback)</text>
+</g>
+<g class="edge-label" data-from="Gate3" data-to="S1_File" data-label="⏪ 章節架構重構 (Rollback)">
+  <rect x="774.5128333333332" y="238.6" width="145.954" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="847.4898333333332" y="253.75" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">⏪ 章節架構重構 (Rollback)</text>
+</g>
+<g class="edge-label" data-from="Gate3" data-to="End" data-label="✅ 驗收滿意完工">
+  <rect x="2192.9623333333334" y="95.9" width="102.59200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="2244.258333333333" y="111.05000000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">✅ 驗收滿意完工</text>
+</g>
+<g class="node" data-id="Start" data-label="🚀 【起點】使用者提出簡報主題需求
+（指定核心概念、授課目標）" data-shape="stadium">
+  <rect x="308.4955" y="109.35000000000001" width="281.29299999999995" height="53.800000000000004" rx="26.900000000000002" ry="26.900000000000002" fill="#94A69D" stroke="#94A69D" stroke-width="0.75" />
+  <text x="449.14199999999994" y="136.25" text-anchor="middle" font-size="13" font-weight="500" fill="#FFFFFF"><tspan x="449.14199999999994" dy="-3.9000000000000012">🚀 【起點】使用者提出簡報主題需求</tspan><tspan x="449.14199999999994" dy="16.900000000000002">（指定核心概念、授課目標）</tspan></text>
+</g>
+<g class="node" data-id="S1_Plan" data-label="1.1 檢索 Wiki 知識庫，規劃整體故事線
+（粗估總頁數、章節劃分）" data-shape="rectangle">
+  <rect x="311.8299999999999" y="387.55" width="274.62399999999997" height="53.800000000000004" rx="0" ry="0" fill="#FFFFFF" stroke="#94A69D" stroke-width="2px" />
+  <text x="449.14199999999994" y="414.45" text-anchor="middle" font-size="13" font-weight="500" fill="#4A504D"><tspan x="449.14199999999994" dy="-3.9000000000000012">1.1 檢索 Wiki 知識庫，規劃整體故事線</tspan><tspan x="449.14199999999994" dy="16.900000000000002">（粗估總頁數、章節劃分）</tspan></text>
+</g>
+<g class="node" data-id="S1_File" data-label="1.2 建立持久化暫存檔
+📄 slides/draft_主題.md" data-shape="rectangle">
+  <rect x="358.5129999999999" y="474.90000000000003" width="181.25799999999998" height="53.800000000000004" rx="0" ry="0" fill="#FAF7F2" stroke="#E8D0BB" stroke-width="1.5px" />
+  <text x="449.14199999999994" y="501.8" text-anchor="middle" font-size="13" font-weight="500" fill="#8E9089"><tspan x="449.14199999999994" dy="-3.9000000000000012">1.2 建立持久化暫存檔</tspan><tspan x="449.14199999999994" dy="16.900000000000002">📄 slides/draft_主題.md</tspan></text>
+</g>
+<g class="node" data-id="Gate1" data-label="Gate1" data-shape="rectangle">
+  <rect x="135.46450000000004" y="40" width="71.59" height="36.900000000000006" rx="0" ry="0" fill="#FFFDF9" stroke="#C09A97" stroke-width="2.5px" />
+  <text x="171.25950000000006" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97" dy="4.55">Gate1</text>
+</g>
+<g class="node" data-id="S1_Fix" data-label="修訂章節架構並更新暫存檔" data-shape="rectangle">
+  <rect x="64.03999999999996" y="387.55" width="219.78999999999996" height="36.900000000000006" rx="0" ry="0" fill="#FFFFFF" stroke="#C09A97" stroke-width="1.5px" />
+  <text x="173.93499999999995" y="406" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97" dy="4.55">修訂章節架構並更新暫存檔</text>
+</g>
+<g class="node" data-id="S2_Draft" data-label="2.1 提取當前章節進行卡片與文字規劃
+（每輪 2~3 頁，擬定文字、公式與表格）" data-shape="rectangle">
+  <rect x="1134.7718333333332" y="297.45" width="305.746" height="53.800000000000004" rx="0" ry="0" fill="#FFFFFF" stroke="#94A69D" stroke-width="2px" />
+  <text x="1287.6448333333333" y="324.34999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="#4A504D"><tspan x="1287.6448333333333" dy="-3.9000000000000012">2.1 提取當前章節進行卡片與文字規劃</tspan><tspan x="1287.6448333333333" dy="16.900000000000002">（每輪 2~3 頁，擬定文字、公式與表格）</tspan></text>
+</g>
+<g class="node" data-id="S2_Budget" data-label="🛡️【前置防溢出自檢】物理容量與平衡檢查
+① 字數上限（單卡 ≤ 4 點 / ≤ 100 字）
+② 公式折算（每個 KaTeX 折算 3 行高）
+③ 雙欄高度對稱檢驗（行數差 ≤ 1 行）" data-shape="rectangle">
+  <rect x="879.1534999999999" y="387.55" width="330.93999999999994" height="87.60000000000001" rx="0" ry="0" fill="#FFF8F6" stroke="#C09A97" stroke-width="1.5px" />
+  <text x="1044.6235" y="431.35" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97"><tspan x="1044.6235" dy="-20.8">🛡️【前置防溢出自檢】物理容量與平衡檢查</tspan><tspan x="1044.6235" dy="16.900000000000002">① 字數上限（單卡 ≤ 4 點 / ≤ 100 字）</tspan><tspan x="1044.6235" dy="16.900000000000002">② 公式折算（每個 KaTeX 折算 3 行高）</tspan><tspan x="1044.6235" dy="16.900000000000002">③ 雙欄高度對稱檢驗（行數差 ≤ 1 行）</tspan></text>
+</g>
+<g class="node" data-id="S2_Split" data-label="🔀【主動拆頁機制】
+將該主題拆分為 Slide Xa 與 Xb
+回寫暫存檔並同步微調大綱" data-shape="rectangle">
+  <rect x="1109.3841666666667" y="588.7" width="231.646" height="70.7" rx="0" ry="0" fill="#FFFFFF" stroke="#C09A97" stroke-width="1.5px" />
+  <text x="1225.2071666666668" y="624.0500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97"><tspan x="1225.2071666666668" dy="-12.350000000000001">🔀【主動拆頁機制】</tspan><tspan x="1225.2071666666668" dy="16.900000000000002">將該主題拆分為 Slide Xa 與 Xb</tspan><tspan x="1225.2071666666668" dy="16.900000000000002">回寫暫存檔並同步微調大綱</tspan></text>
+</g>
+<g class="node" data-id="S2_File" data-label="2.2 寫入暫存檔逐頁草案
+📄 slides/draft_主題.md" data-shape="rectangle">
+  <rect x="410.0324999999998" y="588.7" width="195.33699999999996" height="53.800000000000004" rx="0" ry="0" fill="#FAF7F2" stroke="#E8D0BB" stroke-width="1.5px" />
+  <text x="507.7009999999998" y="615.6" text-anchor="middle" font-size="13" font-weight="500" fill="#8E9089"><tspan x="507.7009999999998" dy="-3.9000000000000012">2.2 寫入暫存檔逐頁草案</tspan><tspan x="507.7009999999998" dy="16.900000000000002">📄 slides/draft_主題.md</tspan></text>
+</g>
+<g class="node" data-id="Gate2" data-label="Gate2" data-shape="rectangle">
+  <rect x="951.4488333333334" y="109.35000000000001" width="76.036" height="36.900000000000006" rx="0" ry="0" fill="#FFFDF9" stroke="#C09A97" stroke-width="2.5px" />
+  <text x="989.4668333333334" y="127.80000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97" dy="4.55">Gate2</text>
+</g>
+<g class="node" data-id="S2_Fix" data-label="微調文字並重新執行容量自檢" data-shape="rectangle">
+  <rect x="872.1618333333331" y="297.45" width="234.60999999999999" height="36.900000000000006" rx="0" ry="0" fill="#FFFFFF" stroke="#C09A97" stroke-width="1.5px" />
+  <text x="989.466833333333" y="315.9" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97" dy="4.55">微調文字並重新執行容量自檢</text>
+</g>
+<g class="node" data-id="S3_Build" data-label="3.1 讀取完整草稿，編譯 HTML 簡報
+（注入 Reveal.js、日系粉綠 CSS、KaTeX 渲染）" data-shape="rectangle">
+  <rect x="1468.5178333333333" y="297.45" width="349.465" height="53.800000000000004" rx="0" ry="0" fill="#FFFFFF" stroke="#94A69D" stroke-width="2px" />
+  <text x="1643.2503333333334" y="324.34999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="#4A504D"><tspan x="1643.2503333333334" dy="-3.9000000000000012">3.1 讀取完整草稿，編譯 HTML 簡報</tspan><tspan x="1643.2503333333334" dy="16.900000000000002">（注入 Reveal.js、日系粉綠 CSS、KaTeX 渲染）</tspan></text>
+</g>
+<g class="node" data-id="S3_File" data-label="3.2 生成獨立 HTML 簡報檔案
+🌐 slides/主題_簡報.html" data-shape="rectangle">
+  <rect x="1702.9185833333333" y="387.55" width="222.75399999999996" height="53.800000000000004" rx="0" ry="0" fill="#FAF7F2" stroke="#E8D0BB" stroke-width="1.5px" />
+  <text x="1814.2955833333333" y="414.45" text-anchor="middle" font-size="13" font-weight="500" fill="#8E9089"><tspan x="1814.2955833333333" dy="-3.9000000000000012">3.2 生成獨立 HTML 簡報檔案</tspan><tspan x="1814.2955833333333" dy="16.900000000000002">🌐 slides/主題_簡報.html</tspan></text>
+</g>
+<g class="node" data-id="Gate3" data-label="Gate3" data-shape="rectangle">
+  <rect x="1789.9648333333332" y="40.00000000000001" width="76.036" height="36.900000000000006" rx="0" ry="0" fill="#FFFDF9" stroke="#C09A97" stroke-width="2.5px" />
+  <text x="1827.9828333333332" y="58.45000000000001" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97" dy="4.55">Gate3</text>
+</g>
+<g class="node" data-id="S3_Fix" data-label="微調 CSS 顏色、邊框或字距" data-shape="rectangle">
+  <rect x="1838.9828333333332" y="297.45" width="221.272" height="36.900000000000006" rx="0" ry="0" fill="#FFFFFF" stroke="#C09A97" stroke-width="1.5px" />
+  <text x="1949.6188333333332" y="315.9" text-anchor="middle" font-size="13" font-weight="500" fill="#C09A97" dy="4.55">微調 CSS 顏色、邊框或字距</text>
+</g>
+<g class="node" data-id="End" data-label="🎉 【終點】正式完成！
+歸檔至 slides/，同步更新 index.md 與 log.md" data-shape="stadium">
+  <rect x="2088.2548333333334" y="169.20000000000002" width="312.41499999999996" height="53.800000000000004" rx="26.900000000000002" ry="26.900000000000002" fill="#94A69D" stroke="#94A69D" stroke-width="0.75" />
+  <text x="2244.4623333333334" y="196.10000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="#FFFFFF"><tspan x="2244.4623333333334" dy="-3.9000000000000012">🎉 【終點】正式完成！</tspan><tspan x="2244.4623333333334" dy="16.900000000000002">歸檔至 slides/，同步更新 index.md 與 log.md</tspan></text>
+</g>
+</svg>

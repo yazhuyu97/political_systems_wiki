@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>政黨與選舉制度 — 政治學核心講座</title>
+  
+  <!-- Reveal.js & KaTeX CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  
+  <!-- Google Fonts: Zen Maru Gothic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --card-white: #FFFFFF;
+      --card-highlight: #FFFDF9;
+      --pink-primary: #C09A97;
+      --mint-green: #94A69D;
+      --text-dark: #4A504D;
+      --text-muted: #8E9089;
+      --border-beige: #E8D0BB;
+      --accent-yellow: #EFDBB2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, .reveal {
+      background-color: var(--bg-cream);
+      font-family: 'Zen Maru Gothic', 'Yu Gothic UI', 'Hiragino Maru Gothic ProN', 'Microsoft JhengHei', sans-serif;
+      color: var(--text-dark);
+      font-size: 19px;
+    }
+
+    /* 頂部進度條粉綠定制 */
+    .reveal .progress {
+      height: 6px;
+      color: var(--mint-green);
+      background: rgba(148, 166, 157, 0.2);
+    }
+    .reveal .progress span {
+      background: var(--mint-green);
+    }
+
+    /* 控制按鈕粉色定制 */
+    .reveal .controls button {
+      color: var(--pink-primary) !important;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: 'Zen Maru Gothic', 'Yu Gothic UI', sans-serif;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .reveal h1 {
+      color: var(--pink-primary);
+      font-size: 1.85em;
+      border-bottom: 3px dashed var(--mint-green);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .reveal h2 {
+      color: var(--mint-green);
+      font-size: 1.35em;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .reveal h3 {
+      font-size: 1.15em;
+      margin-bottom: 8px;
+    }
+
+    /* 圓角卡片與陰影 */
+    .card {
+      background: var(--card-white);
+      border: 2px solid var(--border-beige);
+      border-radius: 18px;
+      padding: 20px 24px;
+      box-shadow: 0 8px 24px rgba(148, 166, 157, 0.15);
+      text-align: left;
+      margin-bottom: 12px;
+    }
+
+    .highlight-card {
+      background: var(--card-highlight);
+      border: 2px solid var(--pink-primary);
+      border-radius: 18px;
+      padding: 20px 24px;
+      box-shadow: 0 8px 24px rgba(192, 154, 151, 0.18);
+      text-align: left;
+      margin-bottom: 12px;
+    }
+
+    /* 粉綠圓角徽章 */
+    .badge {
+      display: inline-block;
+      background-color: var(--mint-green);
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.75em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .badge-pink {
+      background-color: var(--pink-primary);
+    }
+
+    .badge-cream {
+      background-color: var(--text-muted);
+    }
+
+    /* 雙欄與排版 */
+    .columns {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+
+    .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    ul {
+      margin: 8px 0;
+      padding-left: 22px;
+      font-size: 0.88em;
+      line-height: 1.55;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin: 6px 0;
+      line-height: 1.55;
+      font-size: 0.9em;
+    }
+
+    strong {
+      color: var(--pink-primary);
+    }
+
+    /* 表格樣式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 10px;
+      font-size: 0.8em;
+      box-shadow: 0 4px 16px rgba(148, 166, 157, 0.1);
+    }
+
+    th {
+      background-color: var(--border-beige);
+      color: var(--text-dark);
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    td {
+      border-bottom: 1px solid var(--bg-cream);
+      padding: 9px 12px;
+      text-align: left;
+      color: var(--text-dark);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .formula-box {
+      background: #FAF7F2;
+      border-radius: 12px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      text-align: center;
+      border: 1px solid var(--border-beige);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ================= Slide 1：封面頁 ================= -->
+      <section>
+        <div class="highlight-card" style="padding: 40px; margin-top: 20px;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-pink">政治學核心專題</span>
+            <span class="badge">選舉制度與政黨體系</span>
+            <span class="badge badge-cream">學術授課</span>
+          </div>
+          <h1 style="border-bottom: none; font-size: 2.3em; margin-bottom: 10px;">🌸 政黨與選舉制度</h1>
+          <h2 style="font-size: 1.35em; color: var(--mint-green); margin-bottom: 20px;">從理論模型到經驗憲政的制度工程</h2>
+          <p style="font-size: 0.95em; color: var(--text-dark); line-height: 1.6;">
+            探討微觀選民偏好如何透過投票規則加總、席次換算公式如何牽動宏觀政黨體系，<br>
+            並深度解析現代民主治理在<strong>「多元代表性」</strong>與<strong>「治理穩定性」</strong>之間的終極取捨。
+          </p>
+          <div style="margin-top: 30px; border-top: 1px dashed var(--border-beige); padding-top: 14px; font-size: 0.8em; color: var(--text-muted); display: flex; justify-content: space-between;">
+            <span>授課原案：國立臺灣大學政治學系 王業立 教授</span>
+            <span>整理編撰：LLM Wiki 知識庫</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 2：孔多塞悖論與阿羅不可能定理 ================= -->
+      <section>
+        <h1>集體選擇的理性困境：投票悖論與阿羅定理</h1>
+        <div class="columns">
+          <div class="col card">
+            <div>
+              <span class="badge badge-pink">多數決循環</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">孔多塞悖論 (Condorcet, 1785)</h3>
+            </div>
+            <p><strong>情境</strong>：3 位理性選民對 3 方案之兩兩對決：</p>
+            <ul>
+              <li>選民 1: $A \succ B \succ C$ ｜ 選民 2: $B \succ C \succ A$</li>
+              <li>選民 3: $C \succ A \succ B$</li>
+            </ul>
+            <div class="formula-box">
+              $$A \succ B \succ C \succ A \dots \text{（循環多數）}$$
+            </div>
+            <ul>
+              <li><strong>無孔多塞贏家</strong>：不存在能擊敗所有人的多數方案。</li>
+              <li><strong>議程操縱（Agenda Control）</strong>：誰掌握表決順序，誰就決定最終勝出者。</li>
+            </ul>
+          </div>
+
+          <div class="col highlight-card">
+            <div>
+              <span class="badge">公理化證明</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">阿羅不可能定理 (Arrow, 1951)</h3>
+            </div>
+            <p><strong>定理陳述</strong>：當方案 $\ge 3$ 時，無法同時滿足五大基本民主條件：</p>
+            <ul>
+              <li><strong>無限制範圍 (U)</strong>：允許選民任意排序偏好。</li>
+              <li><strong>非專制性 (D)</strong>：不存在單一人意志凌駕全體。</li>
+              <li><strong>巴烈圖最優 (P)</strong>：全員一致偏好必須成立。</li>
+              <li><strong>獨立於無關方案 (IIA)</strong>：相對排序不受第三者干擾。</li>
+              <li><strong>遞移性 (Transitivity)</strong>：維持社會理性一致。</li>
+            </ul>
+            <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-muted);">
+              <strong>核心結論</strong>：不存在客觀「總體民意」，選舉結果高度取決於<strong>規則設計</strong>。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 3：中位數選民定理 ================= -->
+      <section>
+        <h1>空間模型與政黨競爭：中位數選民定理 (MVT)</h1>
+        <div class="columns">
+          <div class="col highlight-card">
+            <div>
+              <span class="badge badge-pink">當斯模型 (Downs, 1957)</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">向心競爭均衡</h3>
+            </div>
+            <p><strong>基本模型假設</strong>：</p>
+            <ul>
+              <li>一維連續意識形態光譜（0 左派 $\sim$ 100 右派）。</li>
+              <li>選民皆具備<strong>單峰偏好（Single-Peaked）</strong>，離理想點越遠效用越低。</li>
+              <li>兩大政黨追求選票極大化。</li>
+            </ul>
+            <div class="formula-box">
+              $$\text{納許均衡點：收斂於中位數選民（Position 50）}$$
+            </div>
+            <ul>
+              <li>偏離中間者必然失利，迫使兩黨走向<strong>向心競爭（Centripetal Competition）</strong>。</li>
+              <li>政策政見趨同、模糊化與中間溫和化。</li>
+            </ul>
+          </div>
+
+          <div class="col card">
+            <div>
+              <span class="badge">實務政治邊界</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">初選拉扯與多維挑戰</h3>
+            </div>
+            <p><strong>現實中兩黨未完全重疊的關鍵因素</strong>：</p>
+            <ul>
+              <li><strong>黨內初選機制拉扯</strong>：參選人必須先通過極端深色黨員檢驗，易引發立場反覆（Flip-flop）危機。</li>
+              <li><strong>多維議題空間干擾</strong>：臺灣政治兼具「統獨認同」與「分配正義」雙維度，打破單峰平衡。</li>
+              <li><strong>第三勢力策略性進場</strong>：大黨過度中間化產生兩翼真空，誘發激進小黨進場瓜分基本盤。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 4：多數決制 vs 比例代表制 ================= -->
+      <section>
+        <h1>全球選舉制度兩大主軸：多數決制 vs 比例代表制</h1>
+        <div class="columns">
+          <div class="col card">
+            <div>
+              <span class="badge badge-pink">多數治理導向</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">單一選區相對多數 (FPTP / SMDP)</h3>
+            </div>
+            <ul>
+              <li><strong>機制</strong>：選區規模 $M=1$，最高票者即當選（無需過半）。</li>
+              <li><strong>代表</strong>：英國下議院、美國國會、加拿大、臺灣區域立委。</li>
+              <li><strong>優勢</strong>：選區單一問責清晰、計票簡單、易產生一黨單獨過半之穩定多數政府。</li>
+              <li><strong>代價</strong>：龐大「落選浪費票」、過度獎勵第一大黨（領先席次紅利）、加拉格爾指數 $LSq$ 偏高。</li>
+            </ul>
+          </div>
+
+          <div class="col highlight-card">
+            <div>
+              <span class="badge">民意鏡像反映</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">比例代表制 (PR)</h3>
+            </div>
+            <ul>
+              <li><strong>機制</strong>：複數選區 $M>1$，席次依各政黨得票率比例分配。</li>
+              <li><strong>席次計算公式家族</strong>：
+                <ul>
+                  <li><strong>最大餘數法 (LR)</strong>：黑爾數額 $Q = V/M$、特羅普數額。</li>
+                  <li><strong>最高均數法 (HA)</strong>：漢狄法（除以 $1,2,3..$ 偏大黨）、聖拉古法（除以 $1,3,5..$ 中立）。</li>
+                </ul>
+              </li>
+              <li><strong>效應</strong>：忠實反映社會多元光譜，多黨林立並常態組成聯合內閣；普遍需設「5% 法定門檻」防範國會碎片化。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 5：並立制 vs 聯立制 ================= -->
+      <section>
+        <h1>雙票制的兩大世界：並立制 (MMM) vs 聯立制 (MMP)</h1>
+        <div class="columns">
+          <div class="col card">
+            <div>
+              <span class="badge badge-pink">兩票獨立計算</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">並立制 (MMM / Parallel)</h3>
+            </div>
+            <div class="formula-box">
+              $$\text{國會總席次} = \text{區域當選席次} + \text{不分區席次}$$
+            </div>
+            <ul>
+              <li><strong>代表</strong>：<strong>中華民國臺灣（2008年起：73+34+6=113席）</strong>、日本眾院。</li>
+              <li><strong>本質偏向多數決</strong>：區域席次佔大宗，第一大黨席次率遠高於得票率。</li>
+              <li><strong>小黨極難生存</strong>：區域選區全軍覆沒，不分區又受制於 5% 門檻，票席落差極高。</li>
+            </ul>
+          </div>
+
+          <div class="col highlight-card">
+            <div>
+              <span class="badge">兩票折抵補償</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">聯立制 (MMP / Compensatory)</h3>
+            </div>
+            <div class="formula-box">
+              $$\text{不分區席次} = \text{第二票應得總額} - \text{第一票區域已當選}$$
+            </div>
+            <ul>
+              <li><strong>代表</strong>：<strong>德國聯邦議院</strong>、紐西蘭眾議院。</li>
+              <li><strong>本質純粹比例代表</strong>：第二票徹底決定國會實權版圖。</li>
+              <li><strong>衍生平衡機制</strong>：
+                <ul>
+                  <li><strong>超額席次（Überhangmandate）</strong>：區域超額當選破例保留。</li>
+                  <li><strong>平準席次（Ausgleichsmandate）**</strong>：等比例擴增他黨以恢復公平。</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 6：杜瓦傑定律與量化指標 ================= -->
+      <section>
+        <h1>杜瓦傑定律與量化指標：機制、ENP 與 LSq</h1>
+        <div class="columns">
+          <div class="col card">
+            <div>
+              <span class="badge badge-pink">因果法則 (Duverger, 1951)</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">機械效應與心理效應</h3>
+            </div>
+            <ul>
+              <li><strong>核心命題</strong>：單一選區相對多數有利於兩黨制；比例代表制有利於多黨制。</li>
+              <li><strong>機械效應（選票 $\rightarrow$ 席次）</strong>：贏者全拿產生「席次紅利」，全國性小黨在各選區被系統性過濾浪費。</li>
+              <li><strong>心理效應（選民與菁英）</strong>：選民害怕浪費票進行<strong>策略性投票（棄保）</strong>；菁英資源集中兩大黨。</li>
+            </ul>
+          </div>
+
+          <div class="col highlight-card">
+            <div>
+              <span class="badge">量化政治指標</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">量化分析公式</h3>
+            </div>
+            <p><strong>有效政黨數 (ENP / Laakso-Taagepera)</strong>：</p>
+            <div class="formula-box">
+              $$N_v = \frac{1}{\sum v_i^2} \quad,\quad N_s = \frac{1}{\sum s_i^2}$$
+            </div>
+            <p style="font-size: 0.82em; color: var(--text-muted);">$N_v - N_s > 0$ 反映出選舉制度對政黨的機械過濾壓縮強度。</p>
+            
+            <p><strong>加拉格爾不對稱指數 (Gallagher, LSq)</strong>：</p>
+            <div class="formula-box">
+              $$LSq = \sqrt{\frac{1}{2} \sum_{i=1}^{n} (v_i - s_i)^2}$$
+            </div>
+            <p style="font-size: 0.82em; color: var(--text-muted);">精確量化得票率 $v_i$ 與席次率 $s_i$ 間的票席不成比例性。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 7：薩托利政黨體系與聯合政府 ================= -->
+      <section>
+        <h1>薩托利政黨體系分類與聯合政府組成 (MWC)</h1>
+        <div class="columns">
+          <div class="col card">
+            <div>
+              <span class="badge badge-pink">政黨體系本體論</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">薩托利分類 (Sartori, 1976)</h3>
+            </div>
+            <p><strong>計算規則</strong>：具備「聯合執政」或「阻礙勒索」潛力者始計入。</p>
+            <ul>
+              <li><strong>兩黨制</strong>：向心競爭（中位數選民收斂）。</li>
+              <li><strong>溫和多黨制（3~5黨）</strong>：意識形態距離窄，中間聯盟輪替（向心競爭）。</li>
+              <li><strong>極化多黨制（5~6黨以上）</strong>：
+                <ul>
+                  <li><strong>離心競爭</strong>、反體制政黨、雙邊反對勢力、中間被佔據、政見加價競標等八大病理。</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col highlight-card">
+            <div>
+              <span class="badge">組閣賽局理論</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">聯合政府組成模式</h3>
+            </div>
+            <ul>
+              <li><strong>甘姆森法則 (Gamson's Law)</strong>：內閣官職比例 $\approx$ 席次貢獻比例。</li>
+              <li><strong>最小獲勝聯合 (MWC / Riker)</strong>：席次過半，但抽離任何一黨即跌破 50%（杜絕多餘分贓）。</li>
+              <li><strong>最小意識形態相鄰聯合 (Axelrod)</strong>：僅由光譜上連續相鄰的政黨結盟以降低政策衝突。</li>
+              <li><strong>少數政府 (Strøm)</strong>：在野黨互相牽制或委員會功能強大時，執政黨以少數席次單獨執政。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Slide 8：臺灣實踐與總結 ================= -->
+      <section>
+        <h1>臺灣選制變革經驗、法制規範與終極省思</h1>
+        <div class="columns">
+          <div class="col card">
+            <div>
+              <span class="badge badge-pink">臺灣憲政軌跡</span>
+              <h3 style="color: var(--pink-primary); margin-top: 8px;">告別 SNTV 邁向並立制</h3>
+            </div>
+            <ul>
+              <li><strong>舊制 SNTV 弊端（1992-2004）</strong>：同黨同室操戈、地方派系綁樁、買票賄選、極端化當選、配票技術。</li>
+              <li><strong>2005 第七次修憲改革</strong>：立委減半（225 $\rightarrow$ 113 席）、單一選區兩票並立制 (MMM)、5% 門檻。</li>
+              <li><strong>經驗衝擊</strong>：$N_s$ 自 3.2 驟降至 1.5~2.0，兩黨獨占體制確立；2008 年第一大黨橫掃席次，$LSq$ 飆至 15 創歷史紀錄。</li>
+            </ul>
+          </div>
+
+          <div class="col highlight-card">
+            <div>
+              <span class="badge">法制與哲學反思</span>
+              <h3 style="color: var(--mint-green); margin-top: 8px;">制度工程的終極取捨</h3>
+            </div>
+            <ul>
+              <li><strong>臺灣公法防線</strong>：
+                <ul>
+                  <li>《政黨法》：3% 補助款（每年每票 50 元小黨生命線）、防殭屍政黨退場條款。</li>
+                  <li>《政治獻金法》：個人/企業捐贈上限、專戶透明公開。</li>
+                  <li>立法院黨團協商：3 席成黨團、一個月冷凍期保障少數否決。</li>
+                </ul>
+              </li>
+              <li><strong>終極反思</strong>：<strong>不存在完美選制</strong>。所有制度皆在<strong>「公平代表性」</strong>與<strong>「治理穩定性」</strong>間做政治抉擇；規則確立即決定政治人物與選民的理性算計。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js & Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'slide',
+      plugins: [ RevealMath.KaTeX ]
+    });
+  </script>
+</body>
+</html>
